@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="styleScript.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container" style="border:solid;">
+    <p id="current_date" class="mytime"> the date is:</p>
+    <form class="form-group" action="" method="post" onsubmit="showme(event);">
+        <label class="labs">First name</label></label><input type="text" id="first_name" name="first_name" /><br>
+        <label class="labs">Last name</label><input type="text" id="last_name" name="last_name" /><br>
+        <label class="labsFoDate">date</label><input type="date" id="date_in" name="date_in" /><br>
+        <label class="labsFoDate">trace</label> <input type="text" id="trace_number" name="trace_number" /><br>
+        <div id="error" style="display:none">*all variables are needed</div><br>
+        <input class="btn btn-success" type="submit" id="showw" value="submit"  />
+        <input class="btn btn-success" id="clicking" type="submit" value="testing" />
+    </form>
+
+    <div class="results" style="display: none;background:coral;">
+	<p >check if the is any mistake before we create you account<small>HR</small></p>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+	/*$(document).ready(function(){
+
+
+      $("#showw").click(function(event){
+      	event.preventDefault();
+      	$(".results").show();
+      });
+	});
+	*/
+	function showme(event){
+     event.preventDefault();
+
+     var name =$('#first_name').val();
+     var last =$('#last_name').val();
+     var date_in =$('#date_in').val();
+     var traces =$('#trace_number').val();
+    
+     
+     if(name=="" || last=="" ||date_in==""|| traces==""){
+     $("#error").show();
+     }
+     else{
+     	$("#error").hide();
+     	$(".results").append(name,'<br>').show();
+     	$(".results").append(last,'<br>').show();
+     	$(".results").append(date_in,'<br>').show();
+     	$(".results").append(traces,'<br>').show();
+     
+     
+     }
+	}
+</script>

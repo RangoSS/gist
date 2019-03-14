@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my vaiables</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="styleScript.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+
+
+<div class="container" style="border:solid;">
+    <p id="current_date" class="mytime"> the date is:</p>
+    <form class="form-group" action="" method="post">
+        <label class="labs">First name</label></label><input type="text" id="first_name" name="first_name" /><br>
+        <label class="labs">Last name</label><input type="text" id="last_name" name="last_name" /><br>
+        <label class="labsFoDate">date</label><input type="text" id="date_in" name="date_in" /><br>
+        <label class="labsFoDate">trace</label> <input type="text" id="trace_number" name="trace_number" /><br>
+        <div id="error" style="display:none">*all variables are needed</div><br>
+        <input class="btn btn-success" type="submit" id="showw" value="submit"  />
+        <input class="btn btn-success" id="clicking" type="submit" value="testing" />
+    </form>
+
+    <div id="myDIV">
+        this is my div element
+
+    </div>
+</div>
+<script>
+   /* function validateForm() {
+        var allVars = document.getElementById('first_name').value;
+        //var allsue = document.getElementById('last_name').value;
+        //var allDate = document.getElementById('date_in').value;
+
+        if (allVars == "") {
+            alert("please enter variables");
+        }
+
+
+    }
+
+    function myFunction() {
+     $("#myDIV").hide();
+         
+    }
+    var d = new Date();
+    document.getElementById("current_date").innerHTML = d;
+
+
+    */
+$(document).ready(function(){
+  $("#clicking").click(function(){
+    $("myDIV").hide();
+  });
+  $("#showw").click(function(){
+    $("myDIV").show();
+  });
+});
+</script>
+
+</body>
+
+</html>
